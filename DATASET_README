@@ -1,0 +1,130 @@
+This package includes the Quasar datasets for QA by search and reading.
+
+There are two datasets -- Quasar-S and Quasar-T. -S consists of cloze
+style questions over software entities, and -T consists of trivia questions.
+For both datasets we also provide long and short contexts extracted from
+text corpora using a lucene search for the questions.
+
+The datasets are organized in the following directory structure:
+.
+|-- dataset_statistics.py
+|-- quasar-s
+|   |-- candidates.txt
+|   |-- contexts
+|   |   |-- long
+|   |   |   |-- dev_contexts.json.gz
+|   |   |   |-- test_contexts.json.gz
+|   |   |   `-- train_contexts.json.gz
+|   |   `-- short
+|   |       |-- dev_contexts.json.gz
+|   |       |-- test_contexts.json.gz
+|   |       `-- train_contexts.json.gz
+|   |-- questions
+|   |   |-- dev_questions.json.gz
+|   |   |-- test_questions.json.gz
+|   |   `-- train_questions.json.gz
+|   `-- relation_annotations.json
+`-- readme.txt
+
+There are two sub-directories for each dataset -- 'questions/' containing the
+questions and answers split into train/test/dev sets, and 'contexts/'
+containing the long and short pseudo-documents retrieved for each question by
+our retrieval system.
+
+There are three types of files in these folders:
+1. <train/test/dev>_questions.json.gz: The questions, one json-formatted string
+    per line, in the following format:
+    {   "answer": "sarajevo",
+        "question": "In the act that incited WWI , Serbian Gavrilo Princip assassinated Archduke Franz Ferdinand in 1914 in what city ?",
+        "uid": "s0q11",
+        "tags": ["1tok", "yes-answer-long", "yes-answer-short"]
+    }
+
+    - If "tags" contain "1tok", it means the answer is a single token.
+    - If "tags" contain "yes-answer-long", it means the answer is present in at
+      least one retrieved long pseudo-document for this question.
+    - If "tags" contain "yes-answer-short", it means the answer is present in at
+      least one retrieved short pseudo-document for this question.
+    Note: "yes-answer" is determined by searching for the answer string in
+    the context string, without tokenizing either.
+
+    For quasar-S, the questions are cloze-style, and the cloze to be filled in
+    is denoted by "@placeholder". E.g.,
+    {   "answer": "programming-languages",
+        "question": "lisp -- lisp is a family of general purpose @placeholder influenced by the lambda-calculus and with the ability to manipulate source code as a data structure .",
+        "uid": "lisp@programming-languages@45",
+        "tags": ["yes-answer-long"]
+    }
+
+2. <train/test/dev>_contexts.json.gz: The retrieved pseudo-documents
+    (long / short) for the questions. Each line corresponds to the question
+    on the same line in <train/test/dev>_questions.json.gz. The line is a json
+    formatted string in the following format:
+    {
+        "contexts": [
+            [
+                62.570347,
+                "On mac OS El Capitan I have a virtual-machine vagrant with laravel-homestead box ."
+            ],
+            ...
+        ],
+        "uid": "homestead@php@159"
+    }
+
+    Each pseudo-document is accompanied by a float -- its retrieval score.
+    The documents are sorted according to the retrieval score. The "uid"
+    matches that of the question for which these contexts were retrieved.
+
+3. <split>_nps.json.gz (only for quasar-T): We also provide contiguous chunks of
+    NN* tagged tokens from the context as candidate answers (only for quasar-T).
+    Again each line corresponds to the question in <split>_questions.json.gz,
+    in the format:
+    {
+        "nps": [
+            ...
+            [
+                "aerosol spray",
+                69,
+                29
+            ],
+        ],
+        "uid": "s3q41931"
+    }
+
+    Each element in "nps" is a list with three elements -
+    [candidate, context_id, token_id]. The context_id is the index into the
+    list of context documents, and token_id is the position of the start of
+    the np in the context, when tokenized by white-space. Both are 0-based
+    indices.
+
+    If the correct answer is not detected as an NN* chunk we add it to the
+    list of NPs above. The context_id and token_id are set to -1 in this
+    case.
+
+The "*.json.gz" files can be read in python as follows:
+
+import gzip
+def read_data(path):
+    with gzip.open(path) as f:
+        for line in f:
+            yield eval(line)
+
+'quasar-s/' also contains candidates.txt, which is the output vocabulary for the
+clozes. Hence, every answer is one of these candidates.
+
+We are also providing human-collected annotations over subsets of the dev split
+for the two datasets to allow analysis into the performance of different models.
+These are provided as json-formatted dictionaries mapping the annotation to a
+list of question "uid"s from the dev set for which that annotation is true.
+
+For 'quasar-s/':
+1. relation_annotations.json: Annotations of the relation type between head
+    entity of the cloze question and the answer entity.
+
+For 'quasar-t/':
+1. answer_annotations.json: Annotations of the type of the answer, such as
+    "location" or "date/time".
+2. genre_annotations.json: Annotations of the genre of the question, such as
+    "arts" or "math/science".
+
+Report bugs and missing information at bdhingra@andrew.cmu.edu.
