@@ -60,3 +60,9 @@ if not os.path.exists(short_ctx_root_path):
 
 if not os.path.exists(q_root_path):
     os.makedirs(q_root_path)
+
+#   the trained model root path
+model_root_path=os.path.join(dataset_root_path,"models")
+if not os.path.exists(model_root_path):
+    os.makedirs(model_root_path)
+

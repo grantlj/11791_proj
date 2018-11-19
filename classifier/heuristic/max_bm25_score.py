@@ -1,5 +1,5 @@
 '''
-     11/12/2018: Classfication in heuristic way by maximing over BM25 scores.
+     11/12/2018: Classification in heuristic way by maximing over BM25 scores.
 '''
 
 import os

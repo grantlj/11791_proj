@@ -1,3 +1,6 @@
+'''
+    The vectorizer utilities for different features. Convert pickle format features into real vectors in numpy format.
+'''
 import numpy as np
 import sys
 import os
