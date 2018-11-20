@@ -11,8 +11,15 @@ import utils.gen_utils as gen_utils
 import numpy as np
 
 #   the feature name, vectorizer function list
-feat_list=[("bm25_scores",vectorizer.vec_bm25_func),("indri_scores",vectorizer.vec_indri_func),
-           ("MF-e",vectorizer.vec_mfe_func),("MF-i",vectorizer.vec_mfi_func)]
+#   everything
+#feat_list=[("bm25_scores",vectorizer.vec_bm25_func),("indri_scores",vectorizer.vec_indri_func),
+#           ("MF-e",vectorizer.vec_mfe_func),("MF-i",vectorizer.vec_mfi_func)]
+
+#   retrieval only
+#feat_list=[("bm25_scores",vectorizer.vec_bm25_func),("indri_scores",vectorizer.vec_indri_func)]
+
+#   dist only
+feat_list=[("MF-e",vectorizer.vec_mfe_func),("MF-i",vectorizer.vec_mfi_func)]
 
 feat_list=sorted(feat_list)
 dst_feat_type=".".join([x[0] for x in feat_list])
