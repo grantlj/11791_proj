@@ -32,7 +32,9 @@ candidate_list=gen_utils.read_lines_from_text_file(data_cfg.cand_lst_fn)
 if __name__=="__main__":
     qa_list = gen_utils.read_dict_from_pkl(lst_fn)
     for qid in qa_list:
-        print "classify on qid: ",qid
+
+        if qid%1000==0:
+            print "classify on qid: ",qid
         feat_fn = os.path.join(feat_root_path, str(qid) + ".pkl")
 
         wd_dict = gen_utils.read_dict_from_pkl(feat_fn)

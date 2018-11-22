@@ -14,7 +14,10 @@ import numpy as np
 
 
 #   a list of training configurations (feature name only for each configuration
-train_cfgs=[("MF-e.MF-i.bm25_scores.indri_scores",data_cfg.trn_list_fn,"train")]
+#train_cfgs=[("MF-e.MF-i.bm25_scores.indri_scores",data_cfg.trn_list_fn,"train")]
+
+train_cfgs=[("bm25_scores.indri_scores",data_cfg.trn_list_fn,"train"),
+            ("MF-e.MF-i", data_cfg.trn_list_fn, "train")]
 model_type="linear_svm"
 
 cand_list=gen_utils.read_lines_from_text_file(data_cfg.cand_lst_fn)
