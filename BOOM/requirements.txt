@@ -1,0 +1,11 @@
+docker
+glog
+numpy
+pika
+pydotplus
+pylint
+pymongo
+pytest
+pyyaml
+rouge
+six
