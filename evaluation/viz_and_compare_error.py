@@ -7,16 +7,20 @@ import sys
 sys.path.append("../")
 import config.data_config as data_cfg
 import utils.gen_utils as gen_utils
+import utils.data_utils as data_utils
 
 qid_list=gen_utils.read_dict_from_pkl(data_cfg.tst_list_fn)
 
+'''
 #   all correct
 #   a list of correction cfgs (intersection will be applied internally)
 corr_conf_list=[("MF-e.MF-i.bm25_scores.indri_scores","linear_svm"),("MF-e.MF-i","linear_svm")]
 
 #   a list of error cfgs (intersection will be applied internally)
 erro_conf_list=[]
+'''
 
+MAX_VIZ=10
 
 '''
 #   one correct
@@ -27,11 +31,11 @@ corr_conf_list=[("MF-e.MF-i.bm25_scores.indri_scores","linear_svm")]
 erro_conf_list=[("MF-e.MF-i","linear_svm")]
 '''
 
-'''
+
 #   both wrong
 corr_conf_list=[]
 erro_conf_list=[("MF-e.MF-i.bm25_scores.indri_scores","linear_svm"),("MF-e.MF-i","linear_svm")]
-'''
+
 
 def filter_id_set_on_conf(conf,cand_id_set,corr):
     ret_id_set=set()
@@ -69,13 +73,29 @@ def filter_id_set(conf_list,corr):
 
 def viz_result(final_id_set):
 
+    viz_cnt=0
+    for id in final_id_set:
+        viz_cnt+=1
+        q_meta=data_utils.load_quaser_qmeta_by_id(id)
+        q_lctx=data_utils.load_quaser_lctx_by_id(id)
+        print viz_cnt
+        print q_meta
+
+        print ""
+
+        if viz_cnt>MAX_VIZ:
+            break
+        pass
+
     return
 
 
 if __name__=="__main__":
     #  filter the correct qid set
+    print "Filter on Corr..."
     corr_qid_set=filter_id_set(corr_conf_list,corr=True)
 
+    print "Filter on Erro..."
     #  filter the error qid set
     erro_qid_set=filter_id_set(erro_conf_list,corr=False)
 
