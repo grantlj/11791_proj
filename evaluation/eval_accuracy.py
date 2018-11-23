@@ -27,6 +27,7 @@ feat_class_list=[('indri_scores','heuristic',data_cfg.trn_list_fn),
                  ('indri_scores', 'heuristic', data_cfg.tst_list_fn)]
 '''
 
+'''
 feat_class_list=[('bm25_scores.indri_scores',"gnb",data_cfg.trn_list_fn),
                  ('bm25_scores.indri_scores', "gnb", data_cfg.val_list_fn),
                  ('bm25_scores.indri_scores', "gnb", data_cfg.tst_list_fn),
@@ -48,6 +49,12 @@ feat_class_list=[('bm25_scores.indri_scores',"gnb",data_cfg.trn_list_fn),
                  ('MF-e.MF-i.bm25_scores.indri_scores', "linear_svm", data_cfg.tst_list_fn)
 
                  ]
+'''
+
+feat_class_list=[("word_dist","heuristic",data_cfg.trn_list_fn),
+                 ("word_dist","heuristic",data_cfg.val_list_fn),
+                 ("word_dist","heuristic",data_cfg.tst_list_fn)]
+
 def evaluate_a_conf(conf):
     feat_type=conf[0];cls_type=conf[1]
     qid_list=gen_utils.read_dict_from_pkl(conf[2])
