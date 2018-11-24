@@ -1,0 +1,58 @@
+pipeline:
+    name: quasers_pipeline
+    rabbitmq_host: 127.0.0.1
+    clean_up: false
+    use_mongodb: false
+    mongodb_host: 127.0.0.1
+    mode: local
+
+modules:
+    -   name: ext_mfi_feat
+        type: ext_mfi_feat
+        input_file: test_data.json
+        instances: 1
+        output_module: ext_mfe_feat
+
+    - name: ext_mfe_feat
+        type: ext_mfe_feat
+        instances: 1
+        output_module: ext_bm25_feat
+
+
+    - name: ext_bm25_feat
+        type: ext_bm25_feat
+        instances: 1
+        output_module: ext_indri_feat
+        params:
+          - name: k1
+            type: float
+            start: 0.0
+            end: 3
+            step_size: 0.5
+
+          - name: b
+              type: float
+              start: 0.0
+              end: 2
+              step_size: 0.25
+
+          - name: k3
+              type: int
+              start: 0
+              end: 500
+              step_size: 100
+
+    - name: ext_indri_feat
+        type: ext_indri_feat
+        instances: 1
+        output_module: vectorize
+
+    - name: vectorize
+        type: vectorize
+        instances: 1
+        output_module: eval_svm
+
+    - name: eval_svm
+        type: eval_svm
+        instances: 1
+        output_file: result.csv
