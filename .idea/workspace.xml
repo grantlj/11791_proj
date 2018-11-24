@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6580878d-55f5-46c0-b958-7835976a27e8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BOOM/examples/QS/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BOOM/examples/QS/conf.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BOOM/examples/QS/extra_modules/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BOOM/examples/QS/extra_modules/eval_svm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BOOM/examples/QS/extra_modules/ext_indri_feat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BOOM/examples/QS/extra_modules/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BOOM/examples/QS/extra_modules/utils/cv_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BOOM/examples/QS/extra_modules/utils/data_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BOOM/examples/QS/extra_modules/utils/fast_feat_reader.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BOOM/examples/QS/extra_modules/utils/gen_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BOOM/examples/QS/extra_modules/utils/log_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BOOM/examples/QS/extra_modules/utils/sed_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BOOM/examples/QS/extra_modules/utils/virat20_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BOOM/examples/QS/extra_modules/vectorize.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BOOM/examples/QS/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miscs/make_cases_for_boom.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature_extraction/extract_indri_feat.py" beforeDir="false" afterPath="$PROJECT_DIR$/feature_extraction/extract_indri_feat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature_extraction/early_fusion.py" beforeDir="false" afterPath="$PROJECT_DIR$/feature_extraction/early_fusion.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,10 +23,11 @@
     <SUITE FILE_PATH="coverage/11791_proj$viz_and_compare_error.coverage" NAME="viz_and_compare_error Coverage Results" MODIFIED="1542940385897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/evaluation" />
     <SUITE FILE_PATH="coverage/11791_proj$extract_indri_feat.coverage" NAME="extract_indri_feat Coverage Results" MODIFIED="1543019505770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/feature_extraction" />
     <SUITE FILE_PATH="coverage/11791_proj$min_wd.coverage" NAME="min_wd Coverage Results" MODIFIED="1542922076991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classifier/heuristic" />
-    <SUITE FILE_PATH="coverage/11791_proj$early_fusion.coverage" NAME="early_fusion Coverage Results" MODIFIED="1542679874411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/feature_extraction" />
+    <SUITE FILE_PATH="coverage/11791_proj$early_fusion.coverage" NAME="early_fusion Coverage Results" MODIFIED="1543032286495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/feature_extraction" />
     <SUITE FILE_PATH="coverage/11791_proj$max_mfi_count.coverage" NAME="max_mfi_count Coverage Results" MODIFIED="1542089355501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classifier/heuristic" />
     <SUITE FILE_PATH="coverage/11791_proj$extract_bm25_feat.coverage" NAME="extract_bm25_feat Coverage Results" MODIFIED="1543024556978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/feature_extraction" />
     <SUITE FILE_PATH="coverage/11791_proj$eval_gnb.coverage" NAME="eval_gnb Coverage Results" MODIFIED="1542677983498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classifier/train_and_eval" />
+    <SUITE FILE_PATH="coverage/11791_proj$make_cases_for_boom.coverage" NAME="make_cases_for_boom Coverage Results" MODIFIED="1543036449040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/miscs" />
     <SUITE FILE_PATH="coverage/11791_proj$import_main__1_.coverage" NAME="import_main (1) Coverage Results" MODIFIED="1541432667384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pre_processing/import_questions" />
     <SUITE FILE_PATH="coverage/11791_proj$train_gnb.coverage" NAME="train_gnb Coverage Results" MODIFIED="1542602258519" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classifier/train_and_eval" />
     <SUITE FILE_PATH="coverage/11791_proj$extract_we_sim_feat.coverage" NAME="extract_we_sim_feat Coverage Results" MODIFIED="1542780625259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/feature_extraction" />
@@ -59,7 +46,7 @@
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/feature_extraction/extract_indri_feat.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="384">
+                  <state relative-caret-position="357">
                     <caret line="66" column="3" lean-forward="true" selection-start-line="66" selection-start-column="3" selection-end-line="75" selection-end-column="43" />
                   </state>
                 </provider>
@@ -87,33 +74,33 @@
         <counts>
           <entry key="DATASET_README" value="1" />
           <entry key="json" value="2" />
-          <entry key="md" value="2" />
-          <entry key="py" value="118" />
-          <entry key="yaml" value="6" />
+          <entry key="md" value="3" />
+          <entry key="py" value="164" />
+          <entry key="yaml" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="2" />
-          <entry key="Markdown" value="2" />
+          <entry key="Markdown" value="3" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="PyRemoteDebug" value="9" />
-          <entry key="Python" value="109" />
-          <entry key="YAML" value="6" />
+          <entry key="Python" value="155" />
+          <entry key="YAML" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="25966" />
+          <entry key="py" value="27219" />
           <entry key="txt" value="5" />
-          <entry key="yaml" value="216" />
+          <entry key="yaml" value="240" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="5" />
-          <entry key="Python" value="25966" />
-          <entry key="YAML" value="216" />
+          <entry key="Python" value="27219" />
+          <entry key="YAML" value="240" />
         </counts>
       </usages-collector>
     </session>
@@ -123,8 +110,32 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BOOM/examples/QS/conf.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+            <state relative-caret-position="195">
+              <caret line="13" column="35" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BOOM/examples/QS/extra_modules/ext_bm25_feat.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="84" column="45" selection-start-line="84" selection-start-column="45" selection-end-line="84" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BOOM/examples/QS/extra_modules/ext_mfe_feat.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="149">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -181,7 +192,6 @@
         <option value="$PROJECT_DIR$/feature_extraction/vectorizer.py" />
         <option value="$PROJECT_DIR$/classifier/heuristic/max_bm25_score.py" />
         <option value="$PROJECT_DIR$/config/data_config.py" />
-        <option value="$PROJECT_DIR$/feature_extraction/early_fusion.py" />
         <option value="$PROJECT_DIR$/classifier/train_and_eval/train_gnb.py" />
         <option value="$PROJECT_DIR$/classifier/train_and_eval/train_svm.py" />
         <option value="$PROJECT_DIR$/classifier/train_and_eval/eval_svm.py" />
@@ -190,14 +200,16 @@
         <option value="$PROJECT_DIR$/classifier/heuristic/min_wd.py" />
         <option value="$PROJECT_DIR$/evaluation/eval_accuracy.py" />
         <option value="$PROJECT_DIR$/evaluation/viz_and_compare_error.py" />
-        <option value="$PROJECT_DIR$/BOOM/examples/QS/extra_modules/vectorize.py" />
-        <option value="$PROJECT_DIR$/BOOM/examples/QS/extra_modules/eval_svm.py" />
+        <option value="$PROJECT_DIR$/feature_extraction/extract_indri_feat.py" />
+        <option value="$PROJECT_DIR$/feature_extraction/early_fusion.py" />
+        <option value="$PROJECT_DIR$/BOOM/examples/QS/conf.yaml" />
         <option value="$PROJECT_DIR$/BOOM/examples/QS/extra_modules/ext_mfi_feat.py" />
         <option value="$PROJECT_DIR$/BOOM/examples/QS/extra_modules/ext_mfe_feat.py" />
-        <option value="$PROJECT_DIR$/BOOM/examples/QS/extra_modules/ext_bm25_feat.py" />
-        <option value="$PROJECT_DIR$/BOOM/examples/QS/conf.yaml" />
-        <option value="$PROJECT_DIR$/feature_extraction/extract_indri_feat.py" />
+        <option value="$PROJECT_DIR$/miscs/make_cases_for_boom.py" />
         <option value="$PROJECT_DIR$/BOOM/examples/QS/extra_modules/ext_indri_feat.py" />
+        <option value="$PROJECT_DIR$/BOOM/examples/QS/extra_modules/ext_bm25_feat.py" />
+        <option value="$PROJECT_DIR$/BOOM/examples/QS/extra_modules/eval_svm.py" />
+        <option value="$PROJECT_DIR$/BOOM/examples/QS/extra_modules/vectorize.py" />
       </list>
     </option>
   </component>
@@ -208,8 +220,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="34" />
-    <option name="y" value="63" />
+    <option name="x" value="369" />
+    <option name="y" value="157" />
     <option name="width" value="1395" />
     <option name="height" value="868" />
   </component>
@@ -234,7 +246,25 @@
             <path>
               <item name="11791_proj" type="b2602c69:ProjectViewProjectNode" />
               <item name="11791_proj" type="462c0819:PsiDirectoryNode" />
+              <item name="BOOM" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="11791_proj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="11791_proj" type="462c0819:PsiDirectoryNode" />
+              <item name="BOOM" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+              <item name="QS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="11791_proj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="11791_proj" type="462c0819:PsiDirectoryNode" />
               <item name="feature_extraction" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="11791_proj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="11791_proj" type="462c0819:PsiDirectoryNode" />
+              <item name="miscs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="11791_proj" type="b2602c69:ProjectViewProjectNode" />
@@ -286,8 +316,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.extract_bm25_feat">
-    <configuration name="eval_accuracy" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.make_cases_for_boom">
+    <configuration name="early_fusion" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="11791_proj" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -295,12 +325,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/evaluation" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/feature_extraction" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/evaluation/eval_accuracy.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/feature_extraction/early_fusion.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -353,7 +383,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="min_wd" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="make_cases_for_boom" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="11791_proj" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -361,12 +391,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/classifier/heuristic" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/miscs" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classifier/heuristic/min_wd.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/miscs/make_cases_for_boom.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -398,19 +428,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.min_wd" />
-      <item itemvalue="Python.eval_accuracy" />
       <item itemvalue="Python.viz_and_compare_error" />
       <item itemvalue="Python.extract_indri_feat" />
       <item itemvalue="Python.extract_bm25_feat" />
+      <item itemvalue="Python.early_fusion" />
+      <item itemvalue="Python.make_cases_for_boom" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.make_cases_for_boom" />
+        <item itemvalue="Python.early_fusion" />
         <item itemvalue="Python.extract_bm25_feat" />
         <item itemvalue="Python.extract_indri_feat" />
         <item itemvalue="Python.viz_and_compare_error" />
-        <item itemvalue="Python.eval_accuracy" />
-        <item itemvalue="Python.min_wd" />
       </list>
     </recent_temporary>
   </component>
@@ -474,11 +504,26 @@
       <option name="project" value="LOCAL" />
       <updated>1543017034719</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="sync.">
+      <created>1543025204038</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1543025204038</updated>
+    </task>
+    <task id="LOCAL-00009" summary="sync.">
+      <created>1543025274444</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1543025274444</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="34" y="63" width="1395" height="868" extended-state="0" />
+    <frame x="369" y="157" width="1395" height="868" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.27346638" />
@@ -492,7 +537,7 @@
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32860824" />
-      <window_info anchor="bottom" id="Run" order="9" weight="0.32860824" />
+      <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.32860824" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.3969072" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
@@ -619,27 +664,20 @@
           <line>39</line>
           <option name="timeStamp" value="71" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/feature_extraction/early_fusion.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/miscs/make_cases_for_boom.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pre_processing/import_cands/import_main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="10" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
-          <folding>
-            <element signature="e#46#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.2/remote_sources/369116660/201544331/json/decoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="366" selection-start-line="366" selection-end-line="366" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DATASET_README">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -736,24 +774,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/feature_extraction/vectorizer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="11" lean-forward="true" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/data_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feature_extraction/early_fusion.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="51" column="38" lean-forward="true" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -786,13 +810,6 @@
             <element signature="e#82#91#0" expanded="true" />
             <marker date="1542692769503" expanded="true" signature="748:1345" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classifier/train_and_eval/eval_svm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -885,38 +902,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BOOM/examples/toy/conf.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="46" column="33" lean-forward="true" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BOOM/examples/QS/extra_modules/vectorize.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BOOM/examples/QS/extra_modules/eval_svm.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BOOM/examples/toy/extra_modules/Sample.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="35" lean-forward="true" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BOOM/examples/BioASQ/train_sample.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BOOM/examples/BioASQ/conf.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="51" column="23" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="23" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BOOM/boom/modules/csv_writer.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -928,17 +915,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/feature_extraction/extract_bm25_feat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-302">
-          <caret line="40" selection-start-line="40" selection-end-line="49" selection-end-column="31" />
-          <folding>
-            <element signature="e#53#62#0" expanded="true" />
-            <marker date="1542163427467" expanded="true" signature="970:1179" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/feature_extraction/extract_mfi_feat.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="433">
@@ -946,10 +922,93 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/feature_extraction/extract_indri_feat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="66" column="3" lean-forward="true" selection-start-line="66" selection-start-column="3" selection-end-line="75" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feature_extraction/early_fusion.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feature_extraction/vectorizer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classifier/train_and_eval/eval_svm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="46" column="66" lean-forward="true" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOOM/examples/toy/conf.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="46" column="33" lean-forward="true" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOOM/examples/toy/extra_modules/Sample.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="35" lean-forward="true" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOOM/examples/BioASQ/conf.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="50" column="3" lean-forward="true" selection-start-line="50" selection-start-column="3" selection-end-line="53" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOOM/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="196">
+            <caret line="87" column="38" selection-start-line="87" selection-start-column="37" selection-end-line="87" selection-end-column="38" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feature_extraction/extract_bm25_feat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="37" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="37" />
+          <folding>
+            <element signature="e#53#62#0" expanded="true" />
+            <marker date="1542163427467" expanded="true" signature="970:1179" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/feature_extraction/extract_mfe_feat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
+        <state relative-caret-position="-64">
           <caret line="47" column="57" lean-forward="true" selection-start-line="47" selection-start-column="57" selection-end-line="47" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/miscs/make_cases_for_boom.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="35" lean-forward="true" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -963,37 +1022,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/feature_extraction/extract_indri_feat.py">
+    <entry file="file://$PROJECT_DIR$/BOOM/examples/QS/extra_modules/vectorize.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="66" column="3" lean-forward="true" selection-start-line="66" selection-start-column="3" selection-end-line="75" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BOOM/examples/QS/extra_modules/ext_indri_feat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1335">
-          <caret line="89" column="21" lean-forward="true" selection-start-line="89" selection-start-column="21" selection-end-line="89" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BOOM/examples/QS/extra_modules/ext_bm25_feat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-240">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BOOM/examples/QS/extra_modules/ext_mfe_feat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="8" selection-end-column="74" />
+        <state relative-caret-position="264">
+          <caret line="122" column="55" selection-start-line="122" selection-start-column="55" selection-end-line="122" selection-end-column="55" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -1002,8 +1034,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BOOM/examples/QS/extra_modules/ext_mfi_feat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        <state relative-caret-position="-621">
+          <caret line="23" column="70" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="23" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOOM/examples/QS/extra_modules/ext_indri_feat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-426">
+          <caret line="39" column="75" lean-forward="true" selection-start-line="38" selection-start-column="7" selection-end-line="39" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOOM/examples/QS/extra_modules/eval_svm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="56" column="55" selection-start-line="56" selection-start-column="55" selection-end-line="56" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOOM/examples/QS/extra_modules/ext_bm25_feat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="84" column="45" selection-start-line="84" selection-start-column="45" selection-end-line="84" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BOOM/examples/QS/extra_modules/ext_mfe_feat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -1012,8 +1084,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BOOM/examples/QS/conf.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+        <state relative-caret-position="195">
+          <caret line="13" column="35" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="35" />
         </state>
       </provider>
     </entry>

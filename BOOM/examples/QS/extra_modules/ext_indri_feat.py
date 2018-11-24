@@ -4,7 +4,6 @@ from nltk import word_tokenize
 from nltk.corpus import stopwords
 import utils.gen_utils as gen_utils
 import math
-import utils.data_utils as data_utils
 
 
 indri_meta=gen_utils.read_dict_from_pkl("data/Indri_meta.pkl")
@@ -31,9 +30,14 @@ def get_token_dict(tokens):
 
 def multi_process_helper(args):
     q_and_context_list = args[0]
-
+    print "In extracting Indri: ", len(q_and_context_list), type(q_and_context_list)
     ret_list = []
+
+    id=0
     for q_and_context in q_and_context_list:
+
+        id += 1
+        print "In extracting Indri, ind ", id, "/", len(q_and_context_list)
 
         q_context_dict=q_and_context['context']
         all_q_tokens = []
@@ -59,10 +63,10 @@ def multi_process_helper(args):
 
     return ret_list
 
-class ext_mfi_feat(Module):
+class ext_indri_feat(Module):
 
     def __init__(self, module_id, name, exp_name, rabbitmq_host, pipeline_conf, module_conf, **kwargs):
-        super(ext_mfi_feat, self).__init__(module_id, name, exp_name, rabbitmq_host, pipeline_conf, module_conf,
+        super(ext_indri_feat, self).__init__(module_id, name, exp_name, rabbitmq_host, pipeline_conf, module_conf,
                                            **kwargs)
 
         #   number of the processes...
@@ -80,7 +84,7 @@ class ext_mfi_feat(Module):
 
         N = len(q_and_context_list)
         step_size = int(N / float(self.processes))
-        slices = [(q_and_context_list[i:i + step_size]) for i in range(0, N, step_size)]
+        slices = [(q_and_context_list[i:i + step_size],) for i in range(0, N, step_size)]
         tmp = self.pool.map(multi_process_helper, slices)
 
         result = []

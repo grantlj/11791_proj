@@ -3,7 +3,6 @@ from multiprocessing import Pool
 from nltk import word_tokenize
 from nltk.corpus import stopwords
 import utils.gen_utils as gen_utils
-import utils.data_utils as data_utils
 
 stop_words = set(stopwords.words('english'))
 candidate_list=gen_utils.read_lines_from_text_file("data/candidate.lst")
@@ -15,9 +14,15 @@ def most_common_in_list(tokens):
 
 def multi_process_helper(args):
     q_and_context_list=args[0]
+    print "In extracting MFI: ",len(q_and_context_list),type(q_and_context_list)
     ret_list=[]
 
+    id=0
+
     for q_and_context in q_and_context_list:
+        id += 1
+        print "In extracting MFI, ind ",id,"/",len(q_and_context_list)
+
 
         q_context_dict=q_and_context['context']
         all_context_tokens = []
@@ -66,12 +71,16 @@ class ext_mfi_feat(Module):
 
     def process(self, job, data):
 
+
+
+
         #   get the question and context list, each item in the list is a dictionary
         q_and_context_list=data
 
         N=len(q_and_context_list)
+
         step_size = int(N / float(self.processes))
-        slices = [(q_and_context_list[i:i + step_size]) for i in range(0, N, step_size)]
+        slices = [(q_and_context_list[i:i + step_size],) for i in range(0, N, step_size)]
         tmp = self.pool.map(multi_process_helper, slices)
 
         result = []

@@ -3,7 +3,6 @@ from multiprocessing import Pool
 from nltk import word_tokenize
 from nltk.corpus import stopwords
 import utils.gen_utils as gen_utils
-import utils.data_utils as data_utils
 
 stop_words = set(stopwords.words('english'))
 candidate_list = gen_utils.read_lines_from_text_file("data/candidate.lst")
@@ -19,7 +18,13 @@ def multi_process_helper(args):
     q_and_context_list = args[0]
     ret_list = []
 
+    print "In extracting MFE: ", len(q_and_context_list), type(q_and_context_list)
+
+    id = 0
     for q_and_context in q_and_context_list:
+
+        id += 1
+        print "In extracting MFE, ind ", id, "/", len(q_and_context_list)
 
         q_context_dict = q_and_context['context']
         all_context_tokens = []
@@ -51,17 +56,17 @@ def multi_process_helper(args):
             most_common_token = None
 
         dst_meta = {'cand_token_list': all_context_tokens, 'most_common': most_common_token}
-        q_and_context['mfi_feat'] = dst_meta
+        q_and_context['mfe_feat'] = dst_meta
 
         ret_list.append(q_and_context)
 
     return ret_list
 
 
-class ext_mfi_feat(Module):
+class ext_mfe_feat(Module):
 
     def __init__(self, module_id, name, exp_name, rabbitmq_host, pipeline_conf, module_conf, **kwargs):
-        super(ext_mfi_feat, self).__init__(module_id, name, exp_name, rabbitmq_host, pipeline_conf, module_conf,
+        super(ext_mfe_feat, self).__init__(module_id, name, exp_name, rabbitmq_host, pipeline_conf, module_conf,
                                            **kwargs)
 
         #   number of the processes...
@@ -79,7 +84,7 @@ class ext_mfi_feat(Module):
 
         N = len(q_and_context_list)
         step_size = int(N / float(self.processes))
-        slices = [(q_and_context_list[i:i + step_size]) for i in range(0, N, step_size)]
+        slices = [(q_and_context_list[i:i + step_size],) for i in range(0, N, step_size)]
         tmp = self.pool.map(multi_process_helper, slices)
 
         result = []
