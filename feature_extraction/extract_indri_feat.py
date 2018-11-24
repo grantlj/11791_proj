@@ -36,6 +36,9 @@ mu=indri_meta['mu']
 C=indri_meta['C']
 ctf_dict=indri_meta['ctf']
 
+print lam,mu,C
+print "init finiished..."
+
 def get_token_dict(tokens):
     ret_dict={}
     total_token=0
