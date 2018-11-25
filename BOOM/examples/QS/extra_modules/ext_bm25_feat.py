@@ -27,7 +27,7 @@ def get_token_dict(tokens):
 def multi_process_helper(args):
     q_and_context_list = args[0]
     k1=args[1];b=args[2];k3=args[3]
-
+    #k1 = 1.2;b = 0.75;k3 = 500
 
     print "In extracting BM25: ", len(q_and_context_list), type(q_and_context_list)
     ret_list = []
@@ -61,7 +61,7 @@ def multi_process_helper(args):
                 tf = 0
 
             rsj_weight = math.log((N - df + 0.5) / float(df + 0.5))
-            tf_weight = tf / float(tf + k1 * ((1 - b) + b * (doclen / float(avg_doclen))))
+            tf_weight = tf / float(0.000001+tf + k1 * ((1 - b) + b * (doclen / float(avg_doclen+0.000001))))
             user_weight = (k3 + 1) * 1 / float((k3 + 1))
 
             all_score = rsj_weight * tf_weight * user_weight
@@ -94,6 +94,8 @@ class ext_bm25_feat(Module):
         N = len(q_and_context_list)
         step_size = int(N / float(self.processes))
         slices = [(q_and_context_list[i:i + step_size],job.params['k1'],job.params['b'],job.params['k3'],) for i in range(0, N, step_size)]
+        #slices = [(q_and_context_list[i:i + step_size],) for i in
+        #          range(0, N, step_size)]
         tmp = self.pool.map(multi_process_helper, slices)
 
         result = []

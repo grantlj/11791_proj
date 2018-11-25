@@ -1,7 +1,7 @@
 pipeline:
     name: quasers_pipeline
     rabbitmq_host: 127.0.0.1
-    clean_up: false
+    clean_up: true
     use_mongodb: false
     mongodb_host: 127.0.0.1
     mode: local
@@ -24,23 +24,23 @@ modules:
         instances: 1
         output_module: ext_indri_feat
         params:
-        - name: k1
-          type: float
-          start: 0.0
-          end: 3
-          step_size: 0.5
+          - name: k1
+            type: float
+            start: 0.0
+            end: 3
+            step_size: 0.5
 
-        - name: b
-          type: float
-          start: 0.0
-          end: 2
-          step_size: 0.25
+          - name: b
+            type: float
+            start: 0.0
+            end: 2
+            step_size: 0.25
 
-        - name: k3
-          type: int
-          start: 0
-          end: 500
-          step_size: 100
+          - name: k3
+            type: int
+            start: 0
+            end: 500
+            step_size: 100
 
     -   name: ext_indri_feat
         type: ext_indri_feat
@@ -55,9 +55,9 @@ modules:
     -   name: eval_svm
         type: eval_svm
         instances: 1
-        output_module: qs_json_writer
+        output_module: csv
 
-    -   name: qs_json_writer
-        type: qs_json_writer
-        output_file: quaser_results.json
+    -   name: csv
+        type: CSVWriter
+        output_file: quaser_results.csv
         instances: 1

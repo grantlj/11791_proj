@@ -26,7 +26,7 @@ def multi_process_helper(args):
 
         final_meta={}
         final_meta['pred']=pred_label
-        final_meta['q_meta']=q_and_context['q_meta']
+        final_meta['q_meta']=q_and_context['question']
         ret_list.append(final_meta)
 
     return ret_list
