@@ -10,6 +10,21 @@ import utils.gen_utils as gen_utils
 
 cand_list=gen_utils.read_lines_from_text_file(data_cfg.cand_lst_fn)
 
+def vec_embed_sim(feat_root_path,qid,bin_size=10):
+    feat_fn = os.path.join(feat_root_path, str(qid) + ".pkl")
+    ret_feat = np.asarray([0.0]*bin_size*len(cand_list))
+
+    try:
+        org_feat = gen_utils.read_dict_from_pkl(feat_fn)
+        for i in xrange(0,len(cand_list)):
+            token=cand_list[i]
+            ret_feat[i*bin_size:(i+1)*bin_size]=org_feat[token]
+
+    except:
+        pass
+
+    return ret_feat
+
 def vec_bm25_func(feat_root_path,qid):
     feat_fn = os.path.join(feat_root_path, str(qid) + ".pkl")
     ret_feat = np.asarray([0.0] * len(cand_list))

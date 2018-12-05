@@ -51,9 +51,87 @@ feat_class_list=[('bm25_scores.indri_scores',"gnb",data_cfg.trn_list_fn),
                  ]
 '''
 
+'''
 feat_class_list=[("word_dist","heuristic",data_cfg.trn_list_fn),
                  ("word_dist","heuristic",data_cfg.val_list_fn),
                  ("word_dist","heuristic",data_cfg.tst_list_fn)]
+'''
+
+
+'''
+feat_class_list=[("late_fusion.MF-e.MF-i.bm25_scores.indri_scores","gnb",data_cfg.trn_list_fn),
+                 ("late_fusion.MF-e.MF-i.bm25_scores.indri_scores","gnb",data_cfg.val_list_fn),
+                 ("late_fusion.MF-e.MF-i.bm25_scores.indri_scores", "gnb", data_cfg.tst_list_fn),
+
+                 ("late_fusion.MF-e.MF-i.bm25_scores.indri_scores", "linear_svm", data_cfg.trn_list_fn),
+                 ("late_fusion.MF-e.MF-i.bm25_scores.indri_scores", "linear_svm", data_cfg.val_list_fn),
+                 ("late_fusion.MF-e.MF-i.bm25_scores.indri_scores", "linear_svm", data_cfg.tst_list_fn)
+
+                 ]
+'''
+
+'''
+
+feat_class_list=[("bm25_scores","linear_svm",data_cfg.trn_list_fn),
+                 ("bm25_scores","linear_svm",data_cfg.val_list_fn),
+                 ("bm25_scores","linear_svm",data_cfg.tst_list_fn),
+
+                 ("indri_scores","linear_svm",data_cfg.trn_list_fn),
+                 ("indri_scores","linear_svm",data_cfg.val_list_fn),
+                 ("indri_scores","linear_svm",data_cfg.tst_list_fn),
+
+                 ("MF-e","linear_svm",data_cfg.trn_list_fn),
+                 ("MF-e","linear_svm",data_cfg.val_list_fn),
+                 ("MF-e","linear_svm",data_cfg.tst_list_fn),
+
+                 ("MF-i", "linear_svm", data_cfg.trn_list_fn),
+                 ("MF-i", "linear_svm", data_cfg.val_list_fn),
+                 ("MF-i", "linear_svm", data_cfg.tst_list_fn),
+
+                 ("bm25_scores","gnb",data_cfg.trn_list_fn),
+                 ("bm25_scores","gnb",data_cfg.val_list_fn),
+                 ("bm25_scores","gnb",data_cfg.tst_list_fn),
+
+                 ("indri_scores","gnb",data_cfg.trn_list_fn),
+                 ("indri_scores","gnb",data_cfg.val_list_fn),
+                 ("indri_scores","gnb",data_cfg.tst_list_fn),
+
+                 ("MF-e","gnb",data_cfg.trn_list_fn),
+                 ("MF-e","gnb",data_cfg.val_list_fn),
+                 ("MF-e","gnb",data_cfg.tst_list_fn),
+
+                 ("MF-i", "gnb", data_cfg.trn_list_fn),
+                 ("MF-i", "gnb", data_cfg.val_list_fn),
+                 ("MF-i", "gnb", data_cfg.tst_list_fn),
+
+                 ]
+'''
+
+feat_class_list=[("late_fusion.bm25_scores.indri_scores","gnb",data_cfg.trn_list_fn),
+                 ("late_fusion.bm25_scores.indri_scores","gnb",data_cfg.val_list_fn),
+                 ("late_fusion.bm25_scores.indri_scores", "gnb", data_cfg.tst_list_fn),
+
+                 ("late_fusion.bm25_scores.indri_scores", "linear_svm", data_cfg.trn_list_fn),
+                 ("late_fusion.bm25_scores.indri_scores", "linear_svm", data_cfg.val_list_fn),
+                 ("late_fusion.bm25_scores.indri_scores", "linear_svm", data_cfg.tst_list_fn),
+
+
+                 ("late_fusion.MF-e.MF-i","gnb",data_cfg.trn_list_fn),
+                 ("late_fusion.MF-e.MF-i","gnb",data_cfg.val_list_fn),
+                 ("late_fusion.MF-e.MF-i", "gnb", data_cfg.tst_list_fn),
+
+                 ("late_fusion.MF-e.MF-i", "linear_svm", data_cfg.trn_list_fn),
+                 ("late_fusion.MF-e.MF-i", "linear_svm", data_cfg.val_list_fn),
+                 ("late_fusion.MF-e.MF-i", "linear_svm", data_cfg.tst_list_fn),
+
+                 ("late_fusion.MF-e.MF-i.bm25_scores.indri_scores", "gnb", data_cfg.trn_list_fn),
+                 ("late_fusion.MF-e.MF-i.bm25_scores.indri_scores", "gnb", data_cfg.val_list_fn),
+                 ("late_fusion.MF-e.MF-i.bm25_scores.indri_scores", "gnb", data_cfg.tst_list_fn),
+
+                 ("late_fusion.MF-e.MF-i.bm25_scores.indri_scores", "linear_svm", data_cfg.trn_list_fn),
+                 ("late_fusion.MF-e.MF-i.bm25_scores.indri_scores", "linear_svm", data_cfg.val_list_fn),
+                 ("late_fusion.MF-e.MF-i.bm25_scores.indri_scores", "linear_svm", data_cfg.tst_list_fn)
+                 ]
 
 def evaluate_a_conf(conf):
     feat_type=conf[0];cls_type=conf[1]

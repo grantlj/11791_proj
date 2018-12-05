@@ -9,11 +9,21 @@ import config.data_config as data_cfg
 import vectorizer as vectorizer
 import utils.gen_utils as gen_utils
 import numpy as np
+import threading
+max_th=6
 
 #   the feature name, vectorizer function list
 #   everything
-feat_list=[("bm25_scores",vectorizer.vec_bm25_func),("indri_scores",vectorizer.vec_indri_func),
-           ("MF-e",vectorizer.vec_mfe_func),("MF-i",vectorizer.vec_mfi_func)]
+#feat_list=[("bm25_scores",vectorizer.vec_bm25_func),("indri_scores",vectorizer.vec_indri_func),
+#           ("MF-e",vectorizer.vec_mfe_func),("MF-i",vectorizer.vec_mfi_func)]
+
+#feat_list=[("bm25_scores",vectorizer.vec_bm25_func)]
+#feat_list=[("indri_scores",vectorizer.vec_indri_func)]
+#feat_list=[("MF-e",vectorizer.vec_mfe_func)]
+#feat_list=[("MF-i",vectorizer.vec_mfi_func)]
+
+feat_list=[("embed_sim",vectorizer.vec_embed_sim)]
+
 
 #   retrieval only
 #feat_list=[("bm25_scores",vectorizer.vec_bm25_func),("indri_scores",vectorizer.vec_indri_func)]
@@ -55,8 +65,18 @@ def handle_a_particular_qid(qid):
     return
 
 if __name__=="__main__":
+
+    thread_pool=[]
     q_list=gen_utils.read_dict_from_pkl(q_list_fn)
     for qid in q_list:
         print qid
-        handle_a_particular_qid(qid)
+        th=threading.Thread(target=handle_a_particular_qid,args=(qid,))
+        th.start()
+        thread_pool.append(th)
+        while len(threading.enumerate())>max_th:
+            pass
+
+    for th in thread_pool:
+        th.join()
+
     print "done."

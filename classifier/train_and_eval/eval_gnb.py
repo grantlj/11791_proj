@@ -15,8 +15,16 @@ cand_list=gen_utils.read_lines_from_text_file(data_cfg.cand_lst_fn)
 #   feature type, classifier type
 #train_eval_cfgs=[("MF-e.MF-i.bm25_scores.indri_scores",data_cfg.trn_list_fn,"train",data_cfg.all_list_fn)]
 
+'''
 train_eval_cfgs=[("MF-e.MF-i",data_cfg.trn_list_fn,"train",data_cfg.all_list_fn),
                  ("bm25_scores.indri_scores", data_cfg.trn_list_fn, "train", data_cfg.all_list_fn)]
+'''
+
+train_eval_cfgs=[("bm25_scores",data_cfg.all_list_fn,"train",data_cfg.all_list_fn),
+           ("indri_scores",data_cfg.all_list_fn,"train",data_cfg.all_list_fn),
+           ("MF-e",data_cfg.all_list_fn,"train",data_cfg.all_list_fn),
+           ("MF-i",data_cfg.all_list_fn,"train",data_cfg.all_list_fn)]
+
 
 model_type="gnb"
 

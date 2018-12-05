@@ -49,9 +49,6 @@ def get_ctf_dict():
                 ret_dict[cand]+=token_cnt_dict[cand]
                 print cand,ret_dict[cand]
 
-        if qid>=5000:
-            break
-
         print qid
 
     return ret_dict,c_len
